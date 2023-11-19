@@ -1,0 +1,60 @@
+/*  || RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* || VARIABLES */
+/* variables are used to represent element that can be reused in the code by giving it a sgnifitcant name, two variables can also use the same value */
+:/* contrl f to find the specific variable used change it. cntrl D multiple times to select the others and change them as well. this rather efficient  for debugging if you as me */
+root {
+     /* COLOR */
+     --BGCOLOR: #475569:
+     --AlT-BGCOLOR: blue;
+
+     /* FONT */
+     --FF: sans-serif;
+     --FS: 2rem;
+
+     /* GENERAL */
+     --PADDING: 2REM;
+     --SHADOW: 0 6px 5px -5px;
+     --BORDERS: 2px solid var(var(--BGCOLOR))
+}
+
+/* body {
+    background-color: var(--BGCOLOR);
+} */
+
+header {
+    border: 0.5rem;
+    color: blueviolet;
+    padding: 2px;
+    display: flex;
+    background-color: aqua;
+}
+
+section {
+    display: grid;
+    background-color: brown;
+    grid-template-columns: repeat(3, 1fr);
+
+}
+.square {
+    background-color: rgb(145, 255, 0);
+    border: 2px solid black;
+    width: 10vw;
+    height: 10vh;
+    border-radius: 15px;
+    display: grid;
+    margin: 2px;
+    place-content: center;
+    padding: 2px;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        background-color: black;
+    }
+}

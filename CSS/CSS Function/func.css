@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    /* variables */
+    --ff: sans-serif;
+    --fs: 1.5rem;
+    --fs-xl: 3rem;
+
+    /* colors */
+ --bgcolor: #475569;
+ --alt-bgcolor: #1e2938;
+  --radial-color: whitesmoke;
+  --light-color: whitesmoke;
+  --dark-color: #000;
+
+  /* general */
+  --Padding: 0.5rem;
+  --shadows: 0 6px 5px -5px var(--dark-color);
+  --Borders: 2px solid var(--dark color);
+
+}
+
+@media (prefer-color-scheme: light) {
+    :root {
+        --bgcolor: var(--dark-color);
+        --alt-bgcolor: #333;
+        --radial-color: rbg(217, 217, 217);
+        --square-bgcolor: rgb(202, 174, 202);
+        }
+}
+
+/* || GENERAL STYLES */
+body {
+    font:
+}
+

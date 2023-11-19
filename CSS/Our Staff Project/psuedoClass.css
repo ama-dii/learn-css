@@ -1,0 +1,57 @@
+/* nav a:link,
+nav a:visited {
+    color: black;
+} */
+
+nav a:any-link {
+    color: black;
+}
+
+/* nav a:hover,
+nav a:focus {
+    color: hsla(0, 0%, 20%, 0.6);
+}  working with pseudo selector make your dry: don't repeat yourself*/
+
+nav :is(a:hover, a:focus) {
+    color: hsla(rgb(100, 14, 14));
+}
+
+nav a:active {
+    color: hsla(rgb(143, 9, 9));
+}
+
+/* is here selector for two classes */
+:is(header, footer, .card) {
+
+}
+/* 
+works the same as :is but no specificity */
+:where () {
+    
+}
+
+/* for highlighing whatever was selected */
+.card:target {
+
+}
+
+.card img[alt] {
+
+}
+
+.card img:not([alt]) {
+
+}
+
+.card:nth-child(2) {
+
+}
+
+/* psuedoElement */
+.card figcaption::after {
+
+}
+
+.card p::before {
+    content: open-quote;
+}
