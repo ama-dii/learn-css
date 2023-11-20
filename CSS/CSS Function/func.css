@@ -8,7 +8,9 @@
 :root {
     /* variables */
     --ff: sans-serif;
-    --fs: 1.5rem;
+   /*  --fs: min(2.25rem, 3vh); */
+   --fs: clamp(1.75rem, 3vh, 2.25rem);
+   --fs-sm: clamp(1.25rem, 2vh, 1.5rem);
     --fs-xl: 3rem;
 
     /* colors */
@@ -18,10 +20,14 @@
   --light-color: whitesmoke;
   --dark-color: #000;
 
+  /* square */
+  --square-bgcolor: papayawhip;
+  --square-size: max(150px, 20vw);
+
   /* general */
-  --Padding: 0.5rem;
+  --padding: 0.5em;
   --shadows: 0 6px 5px -5px var(--dark-color);
-  --Borders: 2px solid var(--dark color);
+  --borders: 2px solid var(--dark color);
 
 }
 
@@ -36,6 +42,112 @@
 
 /* || GENERAL STYLES */
 body {
-    font:
+    font: var(--fs);
+    min-height: 100vh;
+
+    background-color: var(--bgcolor);
+    background-image: radial-gradient(var(--radial-color), var(--bgcolor));
+    display: flex;
+    flex-direction: column;
+    
 }
 
+header,
+nav,
+footer {
+    display: grid;
+    place-content: center;
+    grid-template-columns: 100%;
+    text-align: center;
+}
+
+header,
+footer {
+    position: sticky;
+    background-color: var(--alt-bgcolor);
+    color: var(--light-color);
+}
+
+header {
+    top: 0;
+}
+
+nav {
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    border-bottom: var(--borders);
+    box-shadow: var(--shadows);
+}
+
+main {
+    flex-grow: 1;
+
+   /*  padding: 10px 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: row wrap;
+    gap: min(4vw, 15px); */
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+}
+
+main section {
+    flex-grow: 1;
+    padding: var(--padding);
+}
+
+main aside {
+    background-color: hsla(0, 0%, 20%, 0.8);
+    color: var(--light-color);
+    font-size: var(--fs-sm);
+    font-style: italic;
+    padding: var(--padding);
+}
+
+.content {
+    margin-top: 20px;
+}
+
+.tooltip {
+    border-bottom: 1px dashed orange;
+    position: relative;
+}
+
+.tooltip:hover::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: -20px;
+    white-space: nowrap;
+    background-color: var(--dark-color);
+    padding: var(--padding);
+    border-radius: 15px;
+}
+
+footer {
+    bottom: 0;
+}
+
+a:any-link {
+    color: firebrick;
+}
+
+    a:hover, a:focus {
+        filter: brightness(150%);
+    }
+
+@media screen and (min-width: 576px) {
+    main {
+        flex-flow: row nowrap;
+        justify-content: space-between;
+    }
+
+    main section {
+        width: calc(70% - 5px)
+    }
+
+    main aside {
+        width: calc(30% - 5px);
+    }
+}
