@@ -7,6 +7,7 @@
     <meta name="description" content="About OsasTech">
     <title>About OsasTech</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="main.js" defer></script>
 </head>
 <body>
     <header class="header">
@@ -39,18 +40,22 @@
         </section>
     </header>
 
+    <section>
+
+    </section>
+
     <main class="main">
-        <article id="about">
+        <article id="about" class="main__article about">
             <h2>About OsasTech</h2>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ea minus labore optio eius deserunt sapiente excepturi in. Sunt, ipsa!
             </p>
 
-            <aside>
+            <aside class="about__trivia">
                 <h3>HP laptop</h3>
                 <details>
                     <summary>Lorem, ipsum dolor.</summary>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea vitae hic quod modi culpa exercitationem nihil! Tempora sunt sed natus.
+                    <p class="about__trivia-answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea vitae hic quod modi culpa exercitationem nihil! Tempora sunt sed natus.
                         <time datetime="2023">2023</time>. (source: <cite><a href="" target="_blank"></a></cite>)
                     </p>
                 </details>
@@ -62,7 +67,7 @@
         <p>
             <span class="nowrap">
                 Copyright
-                 &copy; 
+                 &copy; <time id="year"></time>
             </span> 
             <span class="nowrap">OsasTech</span>
         </p>

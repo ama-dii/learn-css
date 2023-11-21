@@ -8,6 +8,7 @@
     <title>OsasTech</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
+    <script src="main.js" defer></script>
 </head>
 <body>
     <header class="header">
@@ -41,59 +42,59 @@
     </header>
 
     <main class="main">
-        <article id="products" class="main__article">
-            <h2>What we Sell</h2>
-            <table>
-                <caption>Gadgets</caption>
+        <article id="products" class="main__article product">
+            <h2 class="product__h2">What we Sell</h2>
+            <table class="product__container">
+                <caption class="offscreen">Gadgets</caption>
                 <thead>
                     <tr>
-                        <th>Laptops</th>
-                        <th scope="col"><abbr title="Quantity">Qty</abbr></th>
-                        <th scope="col">Price</th>
+                        <th class="product__header" scope="col">Laptops</th>
+                        <th class="product__header" scope="col">Quantity</th>
+                        <th class="product__header" scope="col">Price</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <th scope="row" rowspan="3">
+                        <th class="product__item product__cr" scope="row" rowspan="3">
                             Crunchy
                         </th>
-                        <td>1</td>
-                        <td>1naira</td>
+                        <td class="product__item">1</td>
+                        <td class="product__item">1naira</td>
                     </tr>
                     <tr>
-                        <td>2</td>
-                        <td>2naira</td>
+                        <td class="product__item">2</td>
+                        <td class="product__item">2naira</td>
                     </tr>
                     <tr>
-                        <td>3</td>
-                        <td>3naira</td>
+                        <td class="product__item">3</td>
+                        <td class="product__item">3naira</td>
                     </tr>
                     <tr>
-                        <th scope="row" rowspan="3">
+                        <th class="product__item product__sf" scope="row" rowspan="3">
                             soft
                         </th>
-                        <td>1</td>
-                        <td>2naira</td>
+                        <td class="product__item">1</td>
+                        <td class="product__item">2naira</td>
                     </tr>
                     <tr>
-                        <td>2</td>
-                        <td>3naira</td>
+                        <td class="product__item">2</td>
+                        <td class="product__item">3naira</td>
                     </tr>
                     <tr>
-                        <td>3</td>
-                        <td>4naira</td>
+                        <td class="product__item">3</td>
+                        <td class="product__item">4naira</td>
                     </tr>
                 </tbody>
                 <tfoot>
                     <tr>
-                        <td colspan="3">
+                        <td class="product__item product__cs" colspan="3">
                             chips &amp; salsa 2$
                         </td>
                     </tr>
                 </tfoot>
             </table>
-            <br>
-            <p>
+            
+            <p class="center">
                 <a href="#">Back To Top</a>
             </p>
         </article>
@@ -103,7 +104,7 @@
         <p>
             <span class="nowrap">
                 Copyright
-                 &copy; 
+                 &copy; <time id="year"></time>
             </span> 
             <span class="nowrap">OsasTech</span>
         </p>
